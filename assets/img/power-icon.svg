@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Power icon</title>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#f5c518" stroke-width="7" stroke-linecap="round" stroke-dasharray="132 38" transform="rotate(-44 32 32)"/>
+  <path d="M32 7v27" fill="none" stroke="#f5c518" stroke-width="7" stroke-linecap="round"/>
+</svg>
