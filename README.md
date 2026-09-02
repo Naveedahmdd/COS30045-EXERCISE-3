@@ -1,4 +1,4 @@
-# Energy Consumption Website — Exercise 3
+# Appliance Energy Consumption Website — Exercise 3
 
 This website communicates a data story about television screen size, labelled annual energy consumption and energy star ratings in the Australian market. It extends the three-page website created for Exercise 0.2.
 
