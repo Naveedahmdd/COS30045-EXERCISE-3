@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about appliance energy consumption in Australian homes and estimate your electricity use.">
+  <title>Home | Appliance Energy Consumption</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo-link" href="index.html" aria-label="Appliance Energy Consumption home">
+        <img src="assets/img/power-icon.svg" alt="Power logo" class="logo">
+        <span>EnergyWise</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="televisions.html">TV Data Story</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Australian household energy</p>
+        <h1>Understand the energy behind everyday appliances</h1>
+        <p>Compare common appliances, estimate electricity use and make more informed choices for your home.</p>
+        <a class="button" href="#calculator">Estimate your energy use</a>
+      </div>
+      <div class="energy-display" aria-label="Energy saving summary">
+        <span class="energy-display__icon" aria-hidden="true">⚡</span>
+        <strong>Small changes add up</strong>
+        <p>Power × time determines how much electricity an appliance consumes.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="overview-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Energy at home</p>
+        <h2 id="overview-heading">Why appliance consumption matters</h2>
+      </div>
+      <div class="card-grid">
+        <article class="info-card">
+          <span class="card-number">01</span>
+          <h3>Understand usage</h3>
+          <p>Appliance wattage and daily operating time both influence household electricity consumption.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-number">02</span>
+          <h3>Compare products</h3>
+          <p>Energy-rating information can help Australians compare similar products before buying.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-number">03</span>
+          <h3>Estimate costs</h3>
+          <p>Electricity prices can be combined with kilowatt-hours to estimate the cost of running an appliance.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section calculator-section" id="calculator" aria-labelledby="calculator-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Interactive calculator</p>
+        <h2 id="calculator-heading">Appliance energy calculator</h2>
+        <p>Enter an appliance's power and use time to estimate its electricity consumption and cost.</p>
+      </div>
+
+      <div class="calculator-layout">
+        <form id="energy-form" class="calculator-form" novalidate>
+          <div class="form-group">
+            <label for="appliance">Appliance</label>
+            <select id="appliance" name="appliance">
+              <option value="">Custom appliance</option>
+              <option value="100">LED television — 100 W</option>
+              <option value="150">Refrigerator — 150 W</option>
+              <option value="1200">Microwave — 1,200 W</option>
+              <option value="2000">Electric heater — 2,000 W</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="power">Power usage (watts)</label>
+            <input type="number" id="power" name="power" min="1" step="1" value="100" required>
+            <small id="power-error" class="error-message"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="hours">Hours used per day</label>
+            <input type="number" id="hours" name="hours" min="0.1" max="24" step="0.1" value="4" required>
+            <small id="hours-error" class="error-message"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="price">Electricity price (cents per kWh)</label>
+            <input type="number" id="price" name="price" min="0.1" step="0.01" value="30" required>
+            <small id="price-error" class="error-message"></small>
+          </div>
+
+          <button type="submit" class="button">Calculate</button>
+        </form>
+
+        <div class="results-panel" aria-live="polite" aria-labelledby="results-heading">
+          <p class="eyebrow">Your estimate</p>
+          <h3 id="results-heading">Energy results</h3>
+          <p id="form-message" class="form-message">Results update when you calculate or change a value.</p>
+          <dl class="results-list">
+            <div><dt>Daily use</dt><dd id="daily-result">0.40 kWh</dd></div>
+            <div><dt>Monthly use</dt><dd id="monthly-result">12.00 kWh</dd></div>
+            <div><dt>Yearly use</dt><dd id="yearly-result">146.00 kWh</dd></div>
+            <div><dt>Estimated yearly cost</dt><dd id="cost-result">$43.80</dd></div>
+          </dl>
+          <p class="result-note">Estimates use 30 days per month and 365 days per year.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" aria-labelledby="faq-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Common questions</p>
+        <h2 id="faq-heading">Frequently asked questions</h2>
+      </div>
+      <div class="accordion">
+        <article class="accordion-item">
+          <h3><button class="accordion-button" aria-expanded="false" aria-controls="faq-1" id="faq-button-1">What is a kilowatt-hour?<span aria-hidden="true">+</span></button></h3>
+          <div class="accordion-content" id="faq-1" role="region" aria-labelledby="faq-button-1" hidden>
+            <p>A kilowatt-hour (kWh) is a unit used to measure electricity consumption. One kWh equals using 1,000 watts for one hour.</p>
+          </div>
+        </article>
+        <article class="accordion-item">
+          <h3><button class="accordion-button" aria-expanded="false" aria-controls="faq-2" id="faq-button-2">How can I reduce appliance energy use?<span aria-hidden="true">+</span></button></h3>
+          <div class="accordion-content" id="faq-2" role="region" aria-labelledby="faq-button-2" hidden>
+            <p>Choose efficient appliances, switch devices off when not needed and use energy-saving settings where available.</p>
+          </div>
+        </article>
+        <article class="accordion-item">
+          <h3><button class="accordion-button" aria-expanded="false" aria-controls="faq-3" id="faq-button-3">Are calculator results exact?<span aria-hidden="true">+</span></button></h3>
+          <div class="accordion-content" id="faq-3" role="region" aria-labelledby="faq-button-3" hidden>
+            <p>No. The calculator provides an estimate. Actual consumption can vary with appliance settings, usage patterns and electricity tariffs.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span class="current-year">2026</span> Naweed Ahmed</p>
+    <p>Created with assistance from ChatGPT. Code reviewed and adapted by the author.</p>
+  </footer>
+</body>
+</html>
